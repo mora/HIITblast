@@ -18,24 +18,24 @@
         android:id="@+id/textView"
         android:layout_width="150dp"
         android:layout_height="200dp"
-        android:text="TextView"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:layout_marginBottom="19dp"
         android:layout_marginLeft="20dp"
         android:layout_marginStart="20dp"
-        android:layout_marginBottom="19dp" />
+        android:text="Squats are a compund joint exercise. The primary muscle groups that squats target are Hamstrings, Quadriceps, Glutes, and your Lower Back. Squats are also a great fat burning exercise since squating is a a multi-joint movement, activating more muscles, and burning more fat" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Description"
         android:layout_above="@+id/textView"
         android:layout_alignLeft="@+id/textView"
         android:layout_alignStart="@+id/textView"
+        android:layout_marginBottom="30dp"
         android:layout_marginLeft="12dp"
         android:layout_marginStart="12dp"
-        android:layout_marginBottom="30dp" />
+        android:text="Squats" />
 
 </RelativeLayout>
