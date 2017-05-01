@@ -14,4 +14,29 @@
         android:layout_height="wrap_content"
         android:text="Tab3 online text"/>
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="150dp"
+        android:layout_height="220dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginStart="13dp"
+        android:text="TextView"
+        tools:text="Mountian Climbers tagret your abs, buttocks, and your thighs. It will help tone your muscle, and get rid of love handles. This exercise is also a great for increasing cardio and is an adequate warmup to get your heart rate up for those more challenging exercises later on.  "
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:text="Mountain Climbers"
+        tools:text="Mountain Climbers" />
+
 </RelativeLayout>
