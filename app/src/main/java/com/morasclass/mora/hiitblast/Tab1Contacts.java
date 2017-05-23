@@ -21,7 +21,6 @@ public class Tab1Contacts extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.tab1contacts, container, false);
         TextView tv = (TextView)rootView.findViewById(R.id.description);
-        tv.setMovementMethod(new ScrollingMovementMethod());
         return rootView;
     }
 
