@@ -20,7 +20,7 @@ public class timer extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tab1contacts);
 
-        btnStart = (Button)findViewById(R.id.btnStart);
+       /// btnStart = (Button)findViewById(R.id.timerBtn);
         btnStop = (Button)findViewById(R.id.btnStop);
         textViewTime = (TextView) findViewById(R.id.textViewTime);
 
