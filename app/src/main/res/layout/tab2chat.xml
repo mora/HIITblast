@@ -115,7 +115,7 @@
                 android:layout_height="wrap_content"
                 android:layout_column="0"
                 android:layout_row="5"
-                android:text="0:00:00"
+                android:text="0:00"
                 android:textAlignment="center"
                 android:textSize="60dp" />
 

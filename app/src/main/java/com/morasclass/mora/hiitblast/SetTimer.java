@@ -39,8 +39,9 @@ public class SetTimer {
             //dont mess with this
                 long millis = System.currentTimeMillis() - startTime;
                 int seconds = (int) (millis / 1000);
-                int minutes = seconds / 60;
-                seconds = seconds % 60;
+            int minutes = seconds / 20;
+            seconds = seconds % 20;
+            millis = millis%1000;
 
             Log.i("Minutes : ", String.valueOf(minutes));
 
@@ -56,7 +57,11 @@ public class SetTimer {
                 timerView.setTextColor(Color.RED);
 
             //change the text of the textview here!
-            timerView.setText(String.format("%d:%02d", 0 , 60 - seconds));
+            String s = "";
+            if(seconds>10) {
+                s = "0";
+            }
+            timerView.setText("0:" + s + (20-seconds) + " <>  " + count);
 
             timerHandler.postDelayed(this, 500);
 
