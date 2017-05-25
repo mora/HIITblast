@@ -22,7 +22,7 @@ public class video extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tab1contacts);
-        //b = (Button) findViewById(R.id.button);
+        b = (Button) findViewById(R.id.button);
         vid = (VideoView) findViewById(R.id.videoView5);
         med = new MediaController(this);
     }
@@ -34,7 +34,7 @@ public class video extends AppCompatActivity {
             }
         });*/
 
-        String path = "android.resource://" + getPackageName() + "/" + R.raw.video_arg_10;
+        String path = "android.resource://" + getPackageName() + "/" + R.raw.vid;
         Log.i("path: ", path);
         Uri uri = Uri.parse(path);
         Log.i("got","here");

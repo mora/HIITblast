@@ -3,6 +3,7 @@ package com.morasclass.mora.hiitblast;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
+import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +18,7 @@ import android.widget.TextView;
 public class Tab2Chat extends Fragment {
 
     SetTimer setTimer;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
