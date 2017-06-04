@@ -1,0 +1,26 @@
+HITT APP
+
+TO-DO List!
+
+Interface/Design
+	[] make it look a little better
+		-maybe not blue? 
+		-***IDEA ALERT*** make the scheme about the color
+		 that c is wearing in the videos
+
+	[] description
+		-perhaps a little (i) near the video or something
+		 the description looks like too much and 
+		
+	[] design logo type thing
+Functionality
+	[] timer
+		[] set counter
+		[] color functionality
+		
+	[] video
+
+Debugging
+
+Endbits
+	[] make all tabs uniform

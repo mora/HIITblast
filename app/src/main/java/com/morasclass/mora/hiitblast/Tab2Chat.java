@@ -7,10 +7,12 @@ import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.MediaController;
+import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.VideoView;
 
@@ -18,10 +20,11 @@ import android.widget.VideoView;
  * Created by n398447 on 4/20/2017.
  */
 
-public class Tab2Chat extends Fragment implements  View.OnClickListener{
+public class Tab2Chat extends Fragment implements  View.OnClickListener, VideoView.OnTouchListener, SeekBar.OnSeekBarChangeListener{
 
     SetTimer setTimer;
     Video video;
+    Button bu;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -30,28 +33,49 @@ public class Tab2Chat extends Fragment implements  View.OnClickListener{
         //timer
         TextView timerView = (TextView) rootView.findViewById(R.id.timerTextView);
         Button b = (Button) rootView.findViewById(R.id.timerButton);
-
+        setTimer = new SetTimer(b,timerView);
 
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.tab1contacts);
-
 
         //video
-        Button vidB = (Button) rootView.findViewById(R.id.videoButton);
         VideoView vid = (VideoView) rootView.findViewById(R.id.videoView5);
-        MediaController med = new MediaController(this.getContext());
         String path = "android.resource://" + this.getActivity().getPackageName() + "/" + R.raw.vid;
+        
+        vid.setOnTouchListener(this);
+        SeekBar bar = (SeekBar) rootView.findViewById(R.id.seekBar2);
+        bar.setOnSeekBarChangeListener(this);
 
-        vidB.setOnClickListener(this);
+        video = new Video(vid,bar,path);
 
-        video = new Video(vid,vidB,med,path);
-        setTimer = new SetTimer(b,timerView);
+
         return rootView;
     }
 
     @Override
     public void onClick(View view) {
-        video.videoPlay(view);
+        Log.i("Test","fjifjdif");
+
+
     }
 
+    @Override
+    public boolean onTouch(View v, MotionEvent event) {
+        video.tappedVideo(v);
+        return false;
+    }
+
+    @Override
+    public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+        video.changeVideoProgress(progress);
+    }
+
+    @Override
+    public void onStartTrackingTouch(SeekBar seekBar) {
+
+    }
+
+    @Override
+    public void onStopTrackingTouch(SeekBar seekBar) {
+
+    }
 }
