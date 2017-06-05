@@ -10,7 +10,7 @@ public class Description {
 
     TextView title;
     TextView descritption;
-    float originalSize;
+    String originalText;
 
     boolean isExpanded;
 
@@ -18,16 +18,16 @@ public class Description {
         descritption = d;
         title = t;
         isExpanded = true;
-        originalSize = descritption.getTextSize();
+        originalText = descritption.getText().toString();
     }
 
     public void change() {
         if(isExpanded) {
-            descritption.setTextSize(0);
+            descritption.setText("");
             isExpanded = false;
         }
         else {
-            descritption.setTextSize(originalSize);
+            descritption.setText(originalText);
             isExpanded = true;
         }
     }

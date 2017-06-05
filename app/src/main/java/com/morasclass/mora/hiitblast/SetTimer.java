@@ -39,11 +39,9 @@ public class SetTimer {
             //dont mess with this
                 long millis = System.currentTimeMillis() - startTime;
                 int seconds = (int) (millis / 1000);
-            int minutes = seconds / 20;
-            seconds = seconds % 20;
+            int minutes = seconds / 60;
+            seconds = seconds % 60;
             millis = millis%1000;
-
-            Log.i("Minutes : ", String.valueOf(minutes));
 
             count = minutes / 2;
             if(minutes % 2 == 0 )
@@ -61,7 +59,8 @@ public class SetTimer {
             if(seconds>10) {
                 s = "0";
             }
-            timerView.setText("0:" + s + (20-seconds) + " <>  " + count);
+
+            timerView.setText("Time: 0:" + s + (60 - seconds) + "\nCount: " + count);
 
             timerHandler.postDelayed(this, 500);
 

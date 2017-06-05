@@ -4,8 +4,6 @@ package com.morasclass.mora.hiitblast;
 //https://www.youtube.com/watch?v=00LLd7qr9sA
 
 import android.support.design.widget.TabLayout;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -15,13 +13,9 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -107,14 +101,23 @@ public class MainActivity extends AppCompatActivity {
             //Returning the current tabs
             switch (position) {
                 case 0:
-                    Tab1Contacts tab1 = new Tab1Contacts();
+                    Tab1Lunges tab1 = new Tab1Lunges();
                     return tab1;
                 case 1:
-                    Tab2Chat tab2 = new Tab2Chat();
+                    Tab2Squats tab2 = new Tab2Squats();
                     return tab2;
                 case 2:
-                    Tab3Online tab3 = new Tab3Online();
+                    Tab3WallSits tab3 = new Tab3WallSits();
                     return tab3;
+                case 3:
+                    Tab4Pushup tab4 = new Tab4Pushup();
+                    return tab4;
+                case 4:
+                    Tab5Plank tab5 = new Tab5Plank();
+                    return tab5;
+                case 5:
+                    Tab6Superman tab6 = new Tab6Superman();
+                    return tab6;
                 default:
                     return null;
             }
@@ -123,18 +126,24 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 3;
+            return 6;
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "CONTACTS";
+                    return "Lunge";
                 case 1:
-                    return "CHAT";
+                    return "Squat";
                 case 2:
-                    return "ONLINE";
+                    return "Wall Sit";
+                case 3:
+                    return "Push Ups";
+                case 4:
+                    return "Plank";
+                case 5:
+                    return "Superman";
             }
             return null;
         }
