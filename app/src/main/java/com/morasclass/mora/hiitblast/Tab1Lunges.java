@@ -11,8 +11,6 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.VideoView;
 
-import org.w3c.dom.Text;
-
 /**
  * Created by n398447 on 4/20/2017.
  */
@@ -37,7 +35,7 @@ public class Tab1Lunges extends Fragment implements  View.OnClickListener, Video
 
         //video
         VideoView vid = (VideoView) rootView.findViewById(R.id.videoLunge);
-        String path = "android.resource://" + this.getActivity().getPackageName() + "/" + R.raw.lunge2;
+        String path = "android.resource://" + this.getActivity().getPackageName() + "/" + R.raw.lunge;
         vid.setOnTouchListener(this);
         SeekBar bar = (SeekBar) rootView.findViewById(R.id.lungeSeek);
         bar.setOnSeekBarChangeListener(this);
